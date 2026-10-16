@@ -1,0 +1,10 @@
+[user]
+    name = ok2ju
+    email = soulSpringg@gmail.com
+
+[includeIf "gitdir/i:~/Projects/personal/"]
+    path = ~/.gitconfig-personal
+
+# Machine-specific settings (for example the work identity). Not tracked in this repo.
+[includeIf "gitdir/i:~/Projects/PROJECT_NAME_HERE/"]
+    path = ~/.gitconfig-work
