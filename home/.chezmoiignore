@@ -1,0 +1,2 @@
+# Source for the settings.json merge, not a file for the home directory.
+.claude/settings.personal.json
