@@ -1,0 +1,93 @@
+{
+  "env": {
+    "ENABLE_LSP_TOOL": "1",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "permissions": {
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(git clone:*)",
+      "Bash(git commit:*)",
+      "Bash(git pull:*)",
+      "Bash(git merge:*)",
+      "Bash(git rebase:*)",
+      "WebFetch",
+      "WebSearch",
+      "Bash(rm -rf:*)",
+      "Bash(rm -fr:*)"
+    ],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(shutdown:*)",
+      "Bash(reboot:*)",
+      "Bash(dd:*)",
+      "Bash(mkfs:*)",
+      "Bash(chmod:*)",
+      "Bash(chown:*)",
+      "Bash(kill -9:*)",
+      "Bash(pkill:*)",
+      "Bash(: >:*)",
+      "Read(.envrc)",
+      "Read(~/.aws/**)",
+      "Read(~/.ssh/**)",
+      "Edit(~/.ssh/**)",
+      "Edit(~/.aws/**)"
+    ],
+    "defaultMode": "auto",
+    "disableBypassPermissionsMode": "disable",
+    "auto": "enabled"
+  },
+  "model": "opus",
+  "effortLevel": "xhigh",
+  "modelSettings": {
+    "claude-opus-5-5": { "effortLevel": "high" }
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "osascript -e 'display notification \"Claude Code needs your attention\" with title \"Claude Code\"'"
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash ~/.claude/statusline-command.sh"
+  },
+  "extraKnownMarketplaces": {
+    "claude-plugins-official": {
+      "source": { "source": "github", "repo": "anthropics/claude-plugins-official" }
+    },
+    "ai-dev-toolkit": {
+      "source": { "source": "git", "url": "https://github.com/ok2ju/ai-dev-toolkit.git" }
+    }
+  },
+  "enabledPlugins": {
+    "serena@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "core@ai-dev-toolkit": true
+  },
+  "tui": "fullscreen",
+  "editorMode": "normal",
+  "verbose": true,
+  "voice": { "enabled": true, "mode": "hold" },
+  "voiceEnabled": true,
+  "preferredNotifChannel": "ghostty",
+  "teammateMode": "tmux",
+  "feedbackDrafts": "off",
+  "autoMemoryEnabled": false,
+  "autoDreamEnabled": true,
+  "autoCompactEnabled": false,
+  "remoteControlAtStartup": false,
+  "skipDangerousModePermissionPrompt": true,
+  "skipAutoPermissionPrompt": true,
+  "skipWorkflowUsageWarning": true
+}

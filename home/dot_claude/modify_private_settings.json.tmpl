@@ -1,0 +1,8 @@
+#!/bin/sh
+# chezmoi modify script for ~/.claude/settings.json. Merges settings.personal.json
+# into the current file (jq '*': objects merge, arrays are replaced).
+# Keys not in settings.personal.json stay as they are on the machine.
+set -e
+current=$(cat)
+[ -n "$current" ] || current='{}'
+printf '%s' "$current" | jq --slurpfile p {{ joinPath .chezmoi.sourceDir "dot_claude/settings.personal.json" | quote }} '. * $p[0]'
