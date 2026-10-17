@@ -1,3 +1,6 @@
+# HashiCorp's official tap: homebrew-core terraform is frozen at 1.5.7 (license change)
+tap "hashicorp/tap"
+
 # GNU versions of macOS BSD tools (installed with a "g" prefix: gsed, ggrep, gawk, ...)
 brew "bash"
 brew "coreutils"
@@ -30,8 +33,12 @@ brew "mise"
 brew "argocd"
 brew "colima"
 brew "docker"
+brew "helm"
 brew "kind"
 brew "kubernetes-cli"
+
+# Infrastructure as code
+brew "hashicorp/tap/terraform"
 
 # Cloud
 brew "granted"
