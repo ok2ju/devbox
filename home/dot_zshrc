@@ -9,6 +9,8 @@ zstyle ':omz:update' mode disabled
 # The mise plugin also runs `mise activate zsh` (versions in ~/.config/mise/config.toml).
 # zsh-syntax-highlighting must stay last.
 plugins=(git kubectl kube-ps1 docker argocd gh mise terraform helm tmux zsh-autosuggestions zsh-syntax-highlighting)
+# Hide the k8s prompt segment when no kubectl context is set
+KUBE_PS1_HIDE_IF_NOCONTEXT=true
 source $ZSH/oh-my-zsh.sh
 
 # Current k8s context and namespace in the prompt
