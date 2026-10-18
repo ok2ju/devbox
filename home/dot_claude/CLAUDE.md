@@ -10,3 +10,17 @@
 8. Cite file:line instead of quoting code back to me.
 9. Durable state goes to disk (.claude/temp/\*.md) and is referenced by path, not carried in the conversation.
 10. When context passes 150k tokens, say so in one line and recommend /clear.
+
+## Code principles
+
+1. Prefer explicit code over magic: no hidden behavior, implicit conventions, or clever indirection.
+2. Choose boring, proven tech. Keep dependencies few and interfaces small.
+3. Write code that is readable, easy to maintain, and hard to break or misuse.
+4. Reject complexity that does not earn its place. The simpler working solution wins.
+
+## Workflow
+
+1. Spec first for non-trivial work: write or update the spec before any code. Cover goal, scope, interfaces, edge cases, and how to validate the result.
+2. Check the spec against the existing code. If they conflict, surface the conflict and ask; do not resolve it silently.
+3. Start coding only once the spec holds.
+4. Docs ship with the change: when code, behavior, features, or architecture change, update every related doc (README, specs, architecture notes, comments) in the same change. Stale docs count as a bug.
