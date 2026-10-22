@@ -25,3 +25,10 @@
 3. Start coding only once the spec holds.
 4. Docs ship with the change: when code, behavior, features, or architecture change, update every related doc (README, specs, architecture notes, comments) in the same change. Stale docs count as a bug.
 5. Before adding a package or tool, read the vendor's official install docs and cite them. A package with a matching name is not proof it is the right one.
+
+## Tools
+
+1. Jira/Confluence: use the `twg` CLI via its skills. Do not use Atlassian MCP tools.
+2. GitLab (MRs, pipelines, issues, repos): use the `glab` CLI. Do not use GitLab MCP tools.
+3. GitHub (PRs, issues, Actions, API): use the `gh` CLI. Do not use WebFetch on github.com.
+4. Vulnerability scans: use the `snyk` CLI (`snyk test`, `snyk code test`, `snyk container test`, `snyk iac test`).

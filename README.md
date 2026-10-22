@@ -25,6 +25,7 @@ Then, by hand:
 3. Create a new SSH key: `ssh-keygen -t ed25519`. Never copy keys from the old machine.
 4. Run `colima start` before you use `docker`.
 5. Grant app permissions (Accessibility, Screen Recording for Kap) when macOS asks.
+6. Install the `twg` CLI (Jira and Confluence access, used by Claude Code) by following [Atlassian's install guide](https://developer.atlassian.com/cloud/twg-cli/getting-started/installation/). It is not in `Brewfile`.
 
 ## Day to day
 
