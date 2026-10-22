@@ -1,5 +1,7 @@
 # HashiCorp's official tap: homebrew-core terraform is frozen at 1.5.7 (license change)
 tap "hashicorp/tap"
+# Snyk's official tap, updated daily with each CLI release
+tap "snyk/tap"
 
 # GNU versions of macOS BSD tools (installed with a "g" prefix: gsed, ggrep, gawk, ...)
 brew "bash"
@@ -28,6 +30,7 @@ brew "gh"
 brew "gitleaks"
 brew "glab"
 brew "mise"
+brew "snyk/tap/snyk"
 
 # Containers and Kubernetes
 brew "argocd"
