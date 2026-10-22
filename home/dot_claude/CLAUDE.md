@@ -24,3 +24,4 @@
 2. Check the spec against the existing code. If they conflict, surface the conflict and ask; do not resolve it silently.
 3. Start coding only once the spec holds.
 4. Docs ship with the change: when code, behavior, features, or architecture change, update every related doc (README, specs, architecture notes, comments) in the same change. Stale docs count as a bug.
+5. Before adding a package or tool, read the vendor's official install docs and cite them. A package with a matching name is not proof it is the right one.
