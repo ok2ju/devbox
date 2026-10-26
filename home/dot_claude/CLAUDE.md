@@ -29,6 +29,6 @@
 ## Tools
 
 1. Jira/Confluence: use the `twg` CLI via its skills. Do not use Atlassian MCP tools.
-2. GitLab (MRs, pipelines, issues, repos): use the `glab` CLI. Do not use GitLab MCP tools.
-3. GitHub (PRs, issues, Actions, API): use the `gh` CLI. Do not use WebFetch on github.com.
+2. GitLab: use the `glab` CLI for private resources and for any write (MRs, pipelines, issues, comments). Public pages, READMEs, wikis, and docs: WebFetch is fine.
+3. GitHub: use the `gh` CLI for private resources and for any write (PRs, issues, Actions, comments). Public pages, READMEs, wikis, and docs: WebFetch is fine.
 4. Vulnerability scans: use the `snyk` CLI (`snyk test`, `snyk code test`, `snyk container test`, `snyk iac test`).
