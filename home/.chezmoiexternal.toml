@@ -14,3 +14,9 @@
     type = "git-repo"
     url = "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     refreshPeriod = "168h"
+
+# TPM installs the plugins listed in dot_tmux.conf next to itself in ~/.tmux/plugins.
+[".tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+    refreshPeriod = "168h"
